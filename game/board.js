@@ -1,3 +1,5 @@
+
+
 const gridContainer = document.getElementById("grid-container");
 for (let i = 7; i > 0; i--) {
 	const RowDiv = document.createElement("div");
@@ -12,3 +14,4 @@ for (let i = 7; i > 0; i--) {
 		RowDiv.appendChild(gridItem);
 	}
 }
+
