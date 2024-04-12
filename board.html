@@ -1,70 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Game</title>
-		<link
-			rel="shortcut icon"
-			href="./assets/images/snakesandladders-logo-cc.png"
-			type="image/x-icon"
-		/>
-		<link rel="stylesheet" href="./game/board.css" />
-		<script src="./game/board.js" type="module" defer></script>
-		<script src="./game/createArtifacts.js" type="module" defer></script>
-		<script src="./game/game.js" type="module" defer></script>
-		<script src="./game/randomNumber.js" type="module" defer></script>
-		<script src="./game/test.js" type="module" defer></script>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Press+Start+2P&family=Roboto:wght@400;700&family=Young+Serif&display=swap"
-			rel="stylesheet"
-		/>
-	</head>
-	<body>
-		<!-- <header>
-			<div class="logo">
-				<img
-					src="./assets/images/snakesandladders-logo-cc.png"
-					alt="Snakes and Ladder logo"
-				/>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Grid test</title>
+	<link rel="stylesheet" href="./game/board.css" />
+
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Press+Start+2P&family=Roboto:wght@400;700&family=Young+Serif&display=swap"
+		rel="stylesheet" />
+
+</head>
+
+<body>
+	<header class="header">
+		<div class="logo">
+			<img src="./assets/images/logo.png" alt="Snakes and Ladder logo" />
+		</div>
+		<!-- Quit option button  -->
+
+		<button onclick="showPopup()">Quit</button>
+
+		<div id="popup" class="popup-container">
+
+			<div class="popup-box">
+				<p class="score">Are you sure you want to quit?</p>
+
+				<button class="btn" onclick="quit()">Yes</button>
+
+				<button class="btn" onclick="hidePopup()">No</button>
 			</div>
-		</header>-->
-		<main>
-			<section class="section left-section">
-				<div class="game-board">
-					<div id="grid-container">
-						<canvas id="myCanvas"></canvas>
-					</div>
+		</div>
+	</header>
+
+	<main>
+		<section class="section left-section">
+			<div class="game-board">
+				<div id="grid-container">
+					<canvas id="myCanvas"></canvas>
 				</div>
-			</section>
-			<section class="section right-section">
-				<p class="player-label score">
-					<span id="p1-selector"></span>
-					Player 1 Score:
-					<span id="player1-score"> 0</span>
-				</p>
-				<p class="player-label score">
-					<span id="p2-selector"></span>
-					Player 2 Score:
-					<span id="player2-score"> 0</span>
-				</p>
-				<!-- Winner -->
-				<div id="winner">
-					<figure>
-						<img src="./assets/images/cup.png" alt="" />
-					</figure>
-					<p><span id="turns"></span> Wins</p>
+			</div>
+		</section>
+		<section class="section right-section">
+			<p class="player-label score">
+				Player 1 Score:
+				<span id="player1-score"> 0</span>
+			</p>
+			<p class="player-label score">
+				Player 2 Score:
+				<span id="player2-score"> 0</span>
+			</p>
+
+			<!-- Winner -->
+
+			<div class="winner">
+				<div>
+					<img src="./assets/images/cup.png" alt="" />
 				</div>
-				<!-- Winner -->
-				<button id="rollButton">
-					<span id="turns"></span> Roll Dice
-				</button>
-				<figure class="dice">
-					<img id="dice" src="" alt="" />
-				</figure>
-			</section>
-		</main>
-	</body>
+				<p><span id="turns"></span> Wins</p>
+			</div>
+
+			<!-- Winner -->
+
+			<button id="rollButton">
+				<span id="turns"></span> Roll Dice
+			</button>
+		</section>
+	</main>
+	<script src="./game/board.js" type="module" defer></script>
+	<script src="./game/createArtifacts.js" type="module" defer></script>
+	<script src="./game/game.js" type="module" defer></script>
+	<script src="./game/randomNumber.js" type="module" defer></script>
+	<script src="./game/test.js" type="module" defer></script>
+
+	<!--  -->
+	<script>
+		// Function to show the popup
+		function showPopup() {
+			document.getElementById('popup').style.display = 'flex';
+		}
+
+		function showPopup() {
+			document.getElementById('popup').style.display = 'flex';
+		}
+
+		// Function to hide the popup
+		function hidePopup() {
+			document.getElementById('popup').style.display = 'none';
+		}
+
+		// Function to handle "Yes" button click
+		function quit() {
+			// Redirect to index.html
+			window.location.href = 'index.html';
+		}
+	</script>
+</body>
+
 </html>

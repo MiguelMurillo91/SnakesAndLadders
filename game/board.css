@@ -1,9 +1,11 @@
+.header{
+	margin: 10px 15px;
+}
 #grid-container {
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	width: 574px;
-	/* margin: 0 auto; */
 }
 #myCanvas {
 	position: absolute;
@@ -11,7 +13,8 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	/* border: 2px dashed black; */
+	border: 10px solid #9dbf69;
+	box-shadow: 0 0 10px 10px rgba(46, 156, 70, 0.3);
 }
 .grid-item {
 	background-color: #f0f0f0;
@@ -51,13 +54,16 @@ body {
 }
 header {
 	height: 10%;
+	display: flex;
+	justify-content: space-between;
 }
 main {
 	display: flex;
-	height: 100%;
+	height: 90%;
 }
 .section {
 	width: 50%;
+	padding: 20px;
 }
 .left-section {
 	display: flex;
@@ -71,52 +77,60 @@ main {
 	height: 100%;
 }
 .score,
-#winner {
+.winner {
 	font-family: "Press Start 2P", system-ui;
 	font-size: large;
+	margin: 30px 0px;
 }
-#winner {
+.winner {
 	width: 60%;
 	display: none;
-	flex-direction: column;
-	align-items: center;
 }
-#winner figure {
-	width: 50%;
-}
-#winner img {
-	width: 100%;
-}
-#winner.show {
-	display: flex;
-}
-.dice {
-	width: 20%;
-}
-.dice img {
-	width: 100%;
-}
-#dice.hide {
-	display: none;
+.winner img {
+	width: auto;
+	max-height: 100px;
+
 }
 /* BUTTON  */
 button {
 	height: 57px;
-	width: 479px;
+	width: 18rem;
 	border: none;
 	font-family: "Press Start 2P", system-ui;
 	font-size: large;
-	border-bottom: 8px solid rgb(196, 49, 16);
+	border-bottom: 8px solid rgb(231, 204, 204);
 	clip-path: polygon(12% 0, 88% 0, 82% 100%, 6% 100%);
 	transition: transform 0.3s ease;
+	cursor: url(../assets/images/icon-3.png), auto;
 }
 button:hover {
 	transform: scale(1.1);
-	border-bottom: 10px solid rgb(173, 117, 33);
+
+	border-bottom: 8px solid rgb(255, 255, 255);
 }
-.right-section {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+/* Styles for the popup */
+.popup-container {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.9);
 	justify-content: center;
+	align-items: center;
+	z-index: 999;
+}
+
+.popup-box {
+	background-color: white;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+	padding: 10px 20px;
+	margin: 10px;
+	cursor: pointer;
 }
