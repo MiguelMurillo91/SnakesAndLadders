@@ -1,3 +1,8 @@
+* {
+	* {
+		cursor: url(../assets/images/icon-1.png), auto;
+	}
+}
 #grid-container {
 	position: relative;
 	display: flex;
@@ -50,11 +55,12 @@ body {
 	align-self: center;
 }
 header {
-	height: 10%;
+	height: 10vh;
 }
 main {
 	display: flex;
-	height: 100%;
+	/* height: 100%; */
+	height: 90vh;
 }
 .section {
 	width: 50%;
@@ -119,4 +125,12 @@ button:hover {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+}
+
+.arrow {
+	margin-left: 10px;
+	height: 100%;
+}
+.left-arrow {
+	height: 100%;
 }
