@@ -134,6 +134,7 @@ button:hover {
 .left-arrow {
 	height: 100%;
 }
-.left-arrow:hover {
+.left-arrow:hover,
+#rollButton:hover {
 	cursor: url(../assets/images/icon-3.png), auto;
 }
