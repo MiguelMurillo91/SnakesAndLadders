@@ -1,0 +1,54 @@
+* {
+	font-family: "Stone Age", sans-serif;
+	cursor: url(./assets/images/icon-1.png), auto;
+}
+body {
+	font-family: Arial, sans-serif;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th,
+td {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+
+th {
+	background-color: #f2f2f2;
+}
+h1 {
+	text-align: center;
+	font-size: 58px;
+	letter-spacing: 3px;
+	margin-top: 10px;
+}
+.table-title {
+	font-size: 34px;
+	letter-spacing: 3px;
+}
+.normal-font {
+	font-family: "Courier New", Courier, monospace;
+	font-weight: 800;
+	font-size: 23px;
+	color: red;
+}
+.logo-container {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 50px;
+	height: 100px;
+}
+.arrow {
+	height: 70px;
+}
+.left-arrow {
+	height: 100%;
+}
+.left-arrow:hover {
+	cursor: url(./assets/images/icon-3.png), auto;
+}
